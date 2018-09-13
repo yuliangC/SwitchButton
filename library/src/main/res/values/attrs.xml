@@ -7,11 +7,6 @@
         <attr name="selectedTab" format="integer"/>
         <attr name="strokeWidth" format="dimension"/>
         <attr name="strokeRadius" format="dimension"/>
-        <attr name="tabTexts" format="enum">
-            <enum name="tabText1" value="left"/>
-            <enum name="tabText2" value="center"/>
-            <enum name="tabText3" value="right"/>
-        </attr>
     </declare-styleable>
 
 
