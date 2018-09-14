@@ -8,8 +8,9 @@
     android:orientation="vertical">
 
     <com.example.library.SwitchButton
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
+        app:selectedTab="0"
         android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
