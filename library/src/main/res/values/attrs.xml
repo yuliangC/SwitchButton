@@ -2,6 +2,7 @@
 <resources>
 
     <declare-styleable name="SwitchButton">
+        <attr name="normalColor" format="color|reference"/>
         <attr name="selectedColor" format="color|reference"/>
         <attr name="textSize" format="dimension"/>
         <attr name="selectedTab" format="integer"/>
