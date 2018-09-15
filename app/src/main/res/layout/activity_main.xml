@@ -10,8 +10,36 @@
     <com.example.library.SwitchButton
         android:id="@+id/switchButton"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         app:selectedTab="0"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"/>
 
+    <com.example.library.SwitchButton
+        android:id="@+id/switchButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:selectedTab="2"
+        android:layout_marginTop="20dp"
+        app:selectedColor="@color/colorAccent"
+        app:normalColor="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <com.example.library.SwitchButton
+        android:id="@+id/switchButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:selectedTab="1"
+        android:layout_marginTop="20dp"
+        app:selectedColor="@color/colorPrimary"
+        app:normalColor="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center_horizontal"/>
 </LinearLayout>

@@ -63,6 +63,7 @@ public class SwitchButton extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        textPaint.setTextSize(textSize);
         int defaultWidth = getDefaultWidth();
         int defaultHeight = getDefaultHeight();
         setMeasuredDimension(getExpectSize(defaultWidth, widthMeasureSpec), getExpectSize(defaultHeight,
@@ -329,6 +330,7 @@ public class SwitchButton extends View {
             throw new IllegalArgumentException("the size of tabTexts should greater then 1");
         }
         this.tabTexts = tabTexts;
+        invalidate();
     }
 
     public void setListener(OnSwitchCheckListener listener) {

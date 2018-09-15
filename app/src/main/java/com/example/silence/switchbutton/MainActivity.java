@@ -8,7 +8,7 @@ import com.example.library.SwitchButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private SwitchButton switchButton;
+    private SwitchButton switchButton,switchButton2,switchButton3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        switchButton2=findViewById(R.id.switchButton2);
+        switchButton2.setTabTexts("第一项","第二项","第三项","第四项");
+        switchButton3=findViewById(R.id.switchButton3);
+        switchButton3.setTabTexts("hello","world");
 
 
 
