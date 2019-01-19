@@ -8,6 +8,7 @@
         <attr name="selectedTab" format="integer"/>
         <attr name="strokeWidth" format="dimension"/>
         <attr name="strokeRadius" format="dimension"/>
+        <attr name="switchTabs" format="reference"/>
     </declare-styleable>
 
 

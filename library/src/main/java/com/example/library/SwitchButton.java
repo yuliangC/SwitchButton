@@ -32,7 +32,7 @@ public class SwitchButton extends View {
     private int selectedColor;
     private int selectedTab;
     private float textSize,strokeRadius,strokeWidth,totalWidth,totalHeight;
-    private String[] tabTexts=new String[]{"左边","中间","右边","右边"};
+    private String[] tabTexts;
     private Paint selectedPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
     private Paint textPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
     private OnSwitchCheckListener listener;
@@ -56,6 +56,12 @@ public class SwitchButton extends View {
         textSize=array.getDimension(R.styleable.SwitchButton_textSize, sp2px(context,14));
         strokeRadius=array.getDimension(R.styleable.SwitchButton_strokeRadius, dip2Px(context,5));
         strokeWidth=array.getDimension(R.styleable.SwitchButton_strokeWidth, dip2Px(context,2));
+        int mSwitchTabsResId = array.getResourceId(R.styleable.SwitchButton_switchTabs, 0);
+        if (mSwitchTabsResId != 0) {
+            tabTexts = getResources().getStringArray(mSwitchTabsResId);
+        }else {
+            tabTexts=new String[]{"左边","中间","右边","右边"};
+        }
         array.recycle();
     }
 
@@ -170,8 +176,10 @@ public class SwitchButton extends View {
         }
         Rect textRect=new Rect();
         textPaint.getTextBounds(text,0,text.length(),textRect);
+        float mTextHeightOffset = -(textPaint.ascent() + textPaint.descent()) * 0.5f;
         float startX=position*tabWidth+tabWidth/2-textRect.width()/2;
-        float startY=getMeasuredHeight()/2+textRect.height()/2;
+//        float startY=getMeasuredHeight()/2+textRect.height()/2;
+        float startY=getMeasuredHeight()/2+mTextHeightOffset;
         canvas.drawText(text,startX,startY,textPaint);
     }
 
@@ -266,7 +274,7 @@ public class SwitchButton extends View {
 
 
 
-    //清楚选中状态
+    //清除选中状态
     public void clearSelectin(){
         selectedTab=-1;
         postInvalidate();

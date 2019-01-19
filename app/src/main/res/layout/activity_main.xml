@@ -12,6 +12,7 @@
         android:layout_width="300dp"
         android:layout_height="40dp"
         app:selectedTab="0"
+        app:switchTabs="@array/tabs"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"/>
 
