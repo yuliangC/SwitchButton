@@ -1,12 +1,12 @@
 package com.example.silence.switchbutton;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.library.SwitchButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private SwitchButton switchButton,switchButton2,switchButton3;
 
